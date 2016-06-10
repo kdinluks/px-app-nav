@@ -204,7 +204,7 @@ Nav bar / drawer for applications
     },
 
     _checkNavExpandedState: function() {
-      if(this._navExpanded) {
+      if(this.navExpanded) {
         this.debounce('checkNav', function() {
           this._expandNav();
         }, 100);
@@ -219,13 +219,13 @@ Nav bar / drawer for applications
       if (matches) {
         // width is less than 63.9rem in width
         if (this._navExpanded) {
-          this._navExpanded = false;
+          this.navExpanded = false;
           this._checkNavExpandedState();
         }
       } else {
         // width is greater than 63.9rem
         if (!this._navExpanded) {
-          this._navExpanded = true;
+          this.navExpanded = true;
           this._checkNavExpandedState();
         }
       };
